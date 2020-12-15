@@ -1,1 +1,10 @@
-# WDPAI2
+# **WDPAI** - *Make Eat Better*
+
+Projekt wykonany na zajęcia z 'Wstępu do projektowania aplikacji internetowych".
+
+![](https://github.com/takikuba/WDPAI/blob/main/public/img/logo.svg)
+
+
+Projekt ***Make Eat Better*** ma pozwolić każdemu użytkownikowi kuchni na pełne jej wykorzystanie.
+
+Aplikacja ma pozwolić stworzyć każdemu amatorowi kuchni pyszny posiłek, uwzględniając ***składniki*** jakie obecnie posiada, ***czas*** jakim dysponuję jak również zwrócić uwagę ile ***kcal*** przyjmuję.
