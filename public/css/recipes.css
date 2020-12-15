@@ -6,23 +6,23 @@ section {
     overflow: auto;
 }
 
-.projects>div>img {
+.recipes>div>img {
     height: 50%;
     width: 100%;
     object-fit: cover;
     border-radius: 1em 1em 0 0;
 }
 
-.projects>div>div {
+.recipes>div>div {
     height: 50%;
     margin: 1em;
-    color: #2699FB;
+    color: #ffe364;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.projects>div {
+.recipes>div {
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
     height: 400px;
