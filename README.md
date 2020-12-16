@@ -2,7 +2,11 @@
 
 Projekt wykonany na zajęcia z 'Wstępu do projektowania aplikacji internetowych".
 
-![](https://github.com/takikuba/WDPAI/blob/main/public/img/logo.svg)
+<div id="container">
+    <img src="https://github.com/takikuba/WDPAI/blob/main/public/img/logo.svg">
+<div>
+
+
 
 
 Projekt ***Make Eat Better*** ma pozwolić każdemu użytkownikowi kuchni na pełne jej wykorzystanie.

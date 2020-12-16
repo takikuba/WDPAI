@@ -4,6 +4,7 @@ section {
     grid-gap: 2em;
     padding: 2em;
     overflow: auto;
+    border-radius: 1em 1em 1em 1em;
 }
 
 .recipes>div>img {
@@ -16,7 +17,7 @@ section {
 .recipes>div>div {
     height: 50%;
     margin: 1em;
-    color: #ffe364;
+    color: #707070;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -29,4 +30,23 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+button {
+    background: #f3c23d;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 19px;
+
+    width: 20%;
+    border: 1px solid grey;
+    color: white;
+    margin: 0;
+    line-height: 2.5em;
+
+}
+
+.social-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em;
 }
