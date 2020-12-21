@@ -6,7 +6,7 @@ class DefaultController extends AppController {
 
     public function index()
     {
-        $this->render('login');
+        $this->render('login', ['message' => "Hello World!"]);
     }
 
     public function recipes()

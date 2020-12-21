@@ -1,12 +1,13 @@
 body {
     margin: 0;
+
 }
 
 .container {
 
     width: 100vw;
     height: 100vh;
-    background: transparent linear-gradient(180deg, #f3c23d 0%, #ecb92d 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #f3c23d 10%, #f3d685 100%) 0% 0% no-repeat padding-box;
 
     display: flex;
     flex-direction: row;
@@ -22,20 +23,20 @@ body {
 
 }
 
-.logo-container {
+.login-container {
 
     width: 50%;
 
 }
 
-form.login {
+form.login, form.register {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 120%;
-    height: 30vh;
+    width: 80%;
+    height: 40vh;
 
     background: #FFFFFFE0 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 6px #00000029;
@@ -79,10 +80,10 @@ input {
 
 }
 
-@media only screen and (max-device-width: 420px) {
+@media only screen and (max-device-width: 400px) {
 
     .container {
-        
+        background: transparent linear-gradient(180deg, #f3c23d 0%, #ecb92d 100%) 0% 0% no-repeat padding-box;
         flex-direction: column;
 
     }
