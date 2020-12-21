@@ -6,11 +6,11 @@ class DefaultController extends AppController {
 
     public function index()
     {
-        $this->render('login', ['message' => "Hello World!"]);
+        $this->render('login');
     }
 
-    public function recipes()
+    public function projects()
     {
-        $this->render('recipes');
+        $this->render('projects');
     }
 }

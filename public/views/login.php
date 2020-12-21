@@ -15,7 +15,7 @@
         </div>
 
         <div class="login-container">
-            <form class="login" action="login" method="POST">
+            <!-- <form class="login" action="login" method="POST">
                 <div class="messages">
                     <?php if(isset($messages)) {
                         foreach ($messages as $message){
@@ -28,6 +28,20 @@
                 <input name="password" type="password" placeholder="password">
                 <button class="in" type="submit">SIGN IN</button>
                 <button class="up" type="up">SIGN UP</button>
+            </form> -->
+            <form class="login" action="login" method="POST">
+                <div class="messages">
+                    <?php
+                        if(isset($messages)){
+                            foreach($messages as $message) {
+                                echo $message;
+                            }
+                        }
+                    ?>
+                </div>
+                <input name="email" type="text" placeholder="email@email.com">
+                <input name="password" type="password" placeholder="password">
+                <button type="submit">LOGIN</button>
             </form>
         </div>
 

@@ -45,6 +45,10 @@ form.login, form.register {
 
 }
 
+form.register {
+    height: auto;
+}
+
 button {
     
     background: transparent linear-gradient(180deg, #f3c23d 0%, #ecb92d 100%) 0% 0% no-repeat padding-box;
@@ -93,8 +97,11 @@ input {
         font-size: 36px;
 
     }
+    .logo {
+        width: 100%;
+    }
 
-    .login-container, .logo {
+    .login-container {
 
         width: 100%;
 
