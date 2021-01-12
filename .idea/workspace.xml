@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cd3382b-41a7-4c7f-82a4-1c0e2086d350" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Routing.php" beforeDir="false" afterPath="$PROJECT_DIR$/Routing.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/recipes.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/recipes.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/Security.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/recipes.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/recipes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecurityController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +36,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker Compose" />
     <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker Compose" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/controllers" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kuba\Desktop\SemestrV\WDPAI\WDPAI\src\controllers" />
+      <recent name="C:\Users\Kuba\Desktop\SemestrV\WDPAI\WDPAI\public\views" />
+    </key>
   </component>
   <component name="RunManager" selected="Docker.php/Dockerfile (1)">
     <configuration name="nginx/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
@@ -102,6 +108,7 @@
       <workItem from="1608079573363" duration="1453000" />
       <workItem from="1608204423503" duration="4471000" />
       <workItem from="1608478673504" duration="5717000" />
+      <workItem from="1610485414438" duration="6167000" />
     </task>
     <servers />
   </component>

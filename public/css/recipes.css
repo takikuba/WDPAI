@@ -50,3 +50,14 @@ button {
     justify-content: space-between;
     margin: 3em;
 }
+
+section.recipes-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.recipes-form > form {
+    display: flex;
+    flex-direction: column;
+}

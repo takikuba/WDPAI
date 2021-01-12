@@ -65,10 +65,10 @@
 
             <section class="recipes">
                 <div id="recipe-1">
-                    <img src="public/img/upload/salatka_meksykanska.jpg"> 
+                    <img src="public/upload/<?= $recipe->getImage() ?>">
                     <div>
-                        <h2>Sałatka z kurczakiem</h2>
-                        <p>Salatka</p>
+                        <h2><?= $recipe->getTitle() ?></h2>
+                        <p><?= $recipe->getDescription() ?></p>
                         <div class="social-section">
                             <i class="fas fa-heart">600</i>
                             <i class="fas fa-minus-square">121</i>

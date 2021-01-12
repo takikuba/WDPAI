@@ -73,7 +73,7 @@ button.up {
     line-height: 2.5em;
 }
 
-input {
+input, textarea{
 
     background-color: transparent;
     border: none;

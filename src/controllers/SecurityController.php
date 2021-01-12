@@ -24,7 +24,6 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
-        $url = "http://$_SERVER[HTTP_HOST]";
-        header("Location: {$url}/recipes");
+        $this->render('recipes');
     }
 }
