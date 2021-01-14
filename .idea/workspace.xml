@@ -115,7 +115,7 @@
       <workItem from="1610485414438" duration="6320000" />
       <workItem from="1610573825946" duration="2679000" />
       <workItem from="1610625261211" duration="3250000" />
-      <workItem from="1610665347510" duration="2467000" />
+      <workItem from="1610665347510" duration="2851000" />
     </task>
     <task id="LOCAL-00001" summary="Upload recipe cover and create project object">
       <created>1610492761129</created>
@@ -138,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610667694457</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Connect do DB">
+      <created>1610668018653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610668018653</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

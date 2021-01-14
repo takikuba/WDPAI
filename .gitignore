@@ -4,3 +4,5 @@ public/upload/*
 .vscode/
 config.php
 *.idea
+*.xml
+*.iml
