@@ -1,7 +1,7 @@
 <?php
 
 
-class Recipe
+class Project
 {
 
     private $title;
