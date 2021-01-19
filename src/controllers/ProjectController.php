@@ -22,6 +22,12 @@ class ProjectController extends AppController {
 
     }
 
+    public function projects()
+    {
+        $projects = $this->projectRepository->getProjects();
+        $this->render('projects', ['projects' => $projects]);
+    }
+
 
     public function addProject()
     {
@@ -32,11 +38,14 @@ class ProjectController extends AppController {
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            $recipe = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $project = new Project($_POST['title'], $_POST['description'], $_FILES['file']['name']);
 
-            $this->projectRepository->addProject($recipe);
+            $this->projectRepository->addProject($project);
 
-            return $this->render("recipes", ['messages' => $this->messages, 'recipe' => $recipe]);
+            return $this->render('projects', [
+                'messages' => $this->messages,
+                'projects' => $this->projectRepository->getProjects()
+            ]);
         }
 
         $this->render('add_projects', ['messages' => $this->messages]);

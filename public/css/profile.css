@@ -1,0 +1,23 @@
+.profile {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    height: 50%;
+    width: 100%;
+}
+
+.profile>div>img {
+    margin: 1em;
+    height: 20vh;
+    width: 20vh;
+    object-fit: cover;
+    border-radius: 1em 1em 1em 1em;
+}
+
+.profile-info {
+    width: 70%;
+}
+.profile>button {
+    width: 10vw;
+    height: 10vh;
+}

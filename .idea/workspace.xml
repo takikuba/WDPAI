@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3cd3382b-41a7-4c7f-82a4-1c0e2086d350" name="Default Changelist" comment="" />
+    <list default="true" id="3cd3382b-41a7-4c7f-82a4-1c0e2086d350" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/views/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/recipes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ProjectsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ProjectsRepository.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +129,7 @@
       <workItem from="1610573825946" duration="2679000" />
       <workItem from="1610625261211" duration="3250000" />
       <workItem from="1610665347510" duration="2851000" />
+      <workItem from="1611048753234" duration="7222000" />
     </task>
     <task id="LOCAL-00001" summary="Upload recipe cover and create project object">
       <created>1610492761129</created>

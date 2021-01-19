@@ -30,7 +30,7 @@ class ProjectsRepository extends Repository
     }
 
     public function addProject(Project $project): void {
-        $date = new DataTime();
+        $date = new DateTime();
         $stat = $this->database->connect()->prepare('
             insert into projects (title, description, created_at, id_assigned_by, image)
             VALUES (?, ?, ?, ?, ?)
@@ -44,6 +44,27 @@ class ProjectsRepository extends Repository
             $assignedById,
             $project->getImage(),
         ]);
+    }
+
+    public function getProjects() :array {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            Select * from projects;
+        ');
+        $stmt->execute();
+        $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($projects as $project){
+            $result[] = new Project(
+                $project['title'],
+                $project['description'],
+                $project['image']
+            );
+        }
+
+        return $result;
+
     }
 
 }
