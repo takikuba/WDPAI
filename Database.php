@@ -14,8 +14,8 @@ class Database {
 
         $this->username = USERNAME;
         $this->password = PASSWORD;
-        $this->database = DATABASE;
         $this->host = HOST;
+        $this->database = DATABASE;
 
     }
 
@@ -33,7 +33,7 @@ class Database {
             return $conn;
 
         } catch (PDOException $e) {
-            die("Connnection failed: " + $e);
+            die("Connnection failed: " . $e->getMessage());
         }
 
     }

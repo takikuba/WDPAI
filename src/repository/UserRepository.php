@@ -7,27 +7,63 @@ require_once __DIR__.'/../models/User.php';
 class UserRepository extends Repository
 {
 
-    public function getUser(string $email) :?User {
-
-        $stat = $this->database->connect()->prepare('
-            SELECT * FROM public.users WHERE email = :email
+    public function getUser(string $email): ?User
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM users u LEFT JOIN users_details ud 
+            ON u.id_users_details = ud.id WHERE email = :email
         ');
-        $stat->bindParam(':email', $email, PDO::PARAM_STR);
-        $stat->execute();
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
 
-        $user = $stat->fetch(PDO::FETCH_ASSOC);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if( $user == false) {
-            throw new Exception('Not user!');
+        if ($user == false) {
+            return null;
         }
 
-        return new User (
+        return new User(
             $user['email'],
             $user['password'],
             $user['name'],
             $user['surname']
         );
-
     }
 
+    public function addUser(User $user)
+    {
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users_details (name, surname)
+            VALUES (?, ?)
+        ');
+
+        $stmt->execute([
+            $user->getName(),
+            $user->getSurname()
+        ]);
+
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users (email, password, id_users_details)
+            VALUES (?, ?, ?)
+        ');
+
+        $stmt->execute([
+            $user->getEmail(),
+            $user->getPassword(),
+            $this->getUserDetailsId($user)
+        ]);
+    }
+
+    public function getUserDetailsId(User $user): int
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.users_details WHERE name = :name AND surname = :surname
+        ');
+        $stmt->bindParam(':name', $user->getName(), PDO::PARAM_STR);
+        $stmt->bindParam(':surname', $user->getSurname(), PDO::PARAM_STR);
+        $stmt->execute();
+
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $data['id'];
+    }
 }

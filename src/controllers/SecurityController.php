@@ -24,7 +24,9 @@ class SecurityController extends AppController {
         $email = $_POST['email'];
         $password = $_POST['password'];
 
+
         $user = $this->userRepository->getUser($email);
+
 
         if (!$user) {
             return $this->render('login', ['messages' => ['User not found!']]);
@@ -60,7 +62,6 @@ class SecurityController extends AppController {
 
         //TODO try to use better hash function
         $user = new User($email, md5($password), $name, $surname);
-        $user->setPhone($phone);
 
         $this->userRepository->addUser($user);
 

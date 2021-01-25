@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="public/css/recipes.css">
 
     <script src="https://kit.fontawesome.com/4b321f22ba.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
+    <script type="text/javascript" src="./public/js/statistic.js" defer></script>
 
     <title>RECIPES</title>
 
@@ -21,7 +23,7 @@
 
                 <li>
                     <i class="far fa-user-circle"></i>
-                    <a href="#" class="button">Profile</a>
+                    <a href="#" class="button" onclick="profile();">Profile</a>
                 </li>
 
                 <li>
@@ -36,7 +38,7 @@
                 
                 <li>
                     <i class="fas fa-cog"></i>
-                    <a href="#" class="button">Seeting</a>
+                    <a href="#" class="button">Setting</a>
                 </li> 
 
                 <li>
@@ -51,28 +53,29 @@
 
             <header>
 
-                <div class="search_bar">
-                    <form>
-                        <input placeholder="Search recipes">
-                    </form>
+                <div class="search-bar">
+                    <input placeholder="search project">
                 </div>
 
                 <button>TOP</button>
-                <button>SEARCH BY INGREDIENTS</button>
                 <button>CREATE</button>
 
             </header>
 
-            <section class="recipes">
-                <?php foreach($projects as $project): ?>
-                <div id="recipe-1">
+            <section class="projects">
+                <?php foreach ($projects as $project): ?>
+                <div id="<?= $project->getId(); ?>">
                     <img src="public/upload/<?= $project->getImage(); ?>">
                     <div>
                         <h2><?= $project->getTitle(); ?></h2>
                         <p><?= $project->getDescription(); ?></p>
+                        <div class="info-section">
+                            <i class="fas fa-fire"><?= $project->getKcal(); ?></i>
+                            <i class="fas fa-stopwatch"><?= $project->getTime(); ?></i>
+                        </div>
                         <div class="social-section">
-                            <i class="fas fa-heart">88</i>
-                            <i class="fas fa-minus-square">121</i>
+                            <i class="fas fa-heart"><?= $project->getLike(); ?></i>
+                            <i class="fas fa-minus-square"><?= $project->getDislike(); ?></i>
                         </div>
                     </div>
                 </div>
@@ -84,3 +87,22 @@
     </div>
 
 </body>
+
+
+<template id="project-template">
+    <div id="">
+        <img src="">
+        <div>
+            <h2>title</h2>
+            <p>description</p>
+            <div class="info-section">
+                <i class="fas fa-fire"> 0</i>
+                <i class="fas fa-stopwatch"> 0</i>
+            </div>
+            <div class="social-section">
+                <i class="fas fa-heart"> 0</i>
+                <i class="fas fa-minus-square"> 0</i>
+            </div>
+        </div>
+    </div>
+</template>

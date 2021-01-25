@@ -235,3 +235,37 @@ li:last-child {
     box-shadow: 0 0 0.2em red;
     outline: none;
 }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    padding: 2em;
+    overflow: auto;
+    border-radius: 1em 1em 1em 1em;
+}
+
+.projects>div>img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+
+.projects>div>div {
+    height: 50%;
+    margin: 1em;
+    color: #707070;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.projects>div {
+    border: 1px solid gray;
+    border-radius: 1em 1em 0 0;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
