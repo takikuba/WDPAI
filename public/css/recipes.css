@@ -42,7 +42,7 @@ section.project-form {
     flex-direction: column;
 }
 
-button {
+button, header>.button {
     background: #f3c23d;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 19px;

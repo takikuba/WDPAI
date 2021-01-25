@@ -213,11 +213,11 @@ li:last-child {
     width: 1em;
 }
 
-.search_bar {
+.search-bar {
     width: 25%;
 }
 
-.search_bar>form>input {
+.search-bar>input {
     background: transparent linear-gradient(180deg, #e9d5a0 0%, #f3d685 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #707070;

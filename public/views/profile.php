@@ -18,37 +18,7 @@
 
     <div class="base-container">
 
-        <nav>
-            <img src="public/img/logo.svg">
-            <ul>
-
-                <li>
-                    <i class="far fa-user-circle"></i>
-                    <a href="#" class="button">Profile</a>
-                </li>
-
-                <li>
-                    <i class="fas fa-project-diagram"></i>
-                    <a href="#" class="button">Recipes</a>
-                </li>
-
-                <li>
-                    <i class="fas fa-history"></i>
-                    <a href="#" class="button">History</a>
-                </li>
-                
-                <li>
-                    <i class="fas fa-cog"></i>
-                    <a href="#" class="button">Seeting</a>
-                </li> 
-
-                <li>
-                    <i class="fas fa-sign-out-alt"></i>
-                    <a href="#" class="button">Log Out</a>
-                </li>
-
-            </ul>
-        </nav>
+        <?php include('nav.php') ?>
 
         <main>
 

@@ -17,50 +17,11 @@
 
     <div class="base-container">
 
-        <nav>
-            <img src="public/img/logo.svg">
-            <ul>
-
-                <li>
-                    <i class="far fa-user-circle"></i>
-                    <a href="#" class="button" onclick="profile();">Profile</a>
-                </li>
-
-                <li>
-                    <i class="fas fa-project-diagram"></i>
-                    <a href="#" class="button">Recipes</a>
-                </li>
-
-                <li>
-                    <i class="fas fa-history"></i>
-                    <a href="#" class="button">History</a>
-                </li>
-                
-                <li>
-                    <i class="fas fa-cog"></i>
-                    <a href="#" class="button">Setting</a>
-                </li> 
-
-                <li>
-                    <i class="fas fa-sign-out-alt"></i>
-                    <a href="#" class="button">Log Out</a>
-                </li>
-
-            </ul>
-        </nav>
+    <?php include('nav.php') ?>
 
         <main>
 
-            <header>
-
-                <div class="search-bar">
-                    <input placeholder="search project">
-                </div>
-
-                <button>TOP</button>
-                <button>CREATE</button>
-
-            </header>
+            <?php include('header.php') ?>
 
             <section class="projects">
                 <?php foreach ($projects as $project): ?>

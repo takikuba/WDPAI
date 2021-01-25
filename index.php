@@ -14,5 +14,6 @@ Router::post('search', 'ProjectController');
 Router::post('profile', 'ProjectController');
 Router::get('like', 'ProjectController');
 Router::get('dislike', 'ProjectController');
+Router::post('settings', 'DefaultController');
 
 Router::run($path);

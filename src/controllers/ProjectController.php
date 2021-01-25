@@ -20,9 +20,10 @@ class ProjectController extends AppController
         $this->projectRepository = new ProjectsRepository();
     }
 
-    public function profile(int $id){
-        $projects = $this->projectRepository->getProjectByUser($id);
-        $this->render('profile');
+    public function profile(){
+        // $projects = $this->projectRepository->getProjectByUser($id);
+        $projects = $this->projectRepository->getProjects();
+        $this->render('profile', ['projects' => $projects]);
     }
 
     public function projects()
