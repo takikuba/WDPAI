@@ -1,6 +1,6 @@
-<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="786" height="298" viewBox="0 0 786 298">
+<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" width="320" height="298" viewBox="0 0 340 298">
   <text id="MAKE_EAT_BETTER" data-name="MAKE
 EAT
-BETTER" fill="#707070" font-size="60" font-family="AdobeFanHeitiStd-Bold, Adobe Fan Heiti Std" font-weight="700"><tspan x="0" y="53">MAKE</tspan><tspan fill="#ff7a7a" font-size="80" font-family="MalgunGothicBold, Malgun Gothic" font-weight="400"><tspan x="0" y="219">EAT</tspan></tspan><tspan x="0" y="291">BETTER</tspan></text>
+BETTER" fill="#707070" font-size="60" font-family="AdobeFanHeitiStd-Bold, Adobe Fan Heiti Std" font-weight="320"><tspan x="0" y="53">MAKE</tspan><tspan fill="#ff7a7a" font-size="80" font-family="MalgunGothicBold, Malgun Gothic" font-weight="400"><tspan x="0" y="219">EAT</tspan></tspan><tspan x="0" y="291">BETTER</tspan></text>
   <path id="Icon_map-food" data-name="Icon map-food" d="M182.035,34.617l-30.5,168.629L99.9,122.178,86.856,34.245h54.006l10.674-31.42,7.076,13.439L147.346,34.617h34.689ZM80.6,85.3s11.65-38.362-11.289-38.362L22.785,55.705C-.121,55.705,1.5,85.3,1.5,85.3H80.6ZM1.5,110.832S-10.686,137.51,12.22,137.51H60.53c22.939,0,20.076-26.678,20.076-26.678H1.5Zm75.671-5.673a7.1,7.1,0,0,0,0-14.183H-6.811c-.991,0-3.587-6.1-7.32-5.673-9.376,1.074-24.887,9.863-24.887,12.767,0,3.929,39.895,7.089,43.632,7.089Z" transform="translate(157.017 16.175)" fill="#707070"/>
 </svg>

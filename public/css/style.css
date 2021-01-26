@@ -1,12 +1,13 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
 
     width: 100vw;
     height: 100vh;
-    background: transparent linear-gradient(180deg, #f3c23d 0%, #ecb92d 100%) 0% 0% no-repeat padding-box;
+    background: transparent linear-gradient(180deg, #f3c23d 10%, #f3d685 100%) 0% 0% no-repeat padding-box;
 
     display: flex;
     flex-direction: row;
@@ -22,26 +23,30 @@ body {
 
 }
 
-.logo-container {
+.login-container {
 
     width: 50%;
 
 }
 
-form.login {
+form.login, form.register {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 120%;
-    height: 30vh;
+    width: 80%;
+    height: 40vh;
 
     background: #FFFFFFE0 0% 0% no-repeat padding-box;
     box-shadow: 0px 6px 6px #00000029;
     border: 1px solid #707070;
     border-radius: 33px;
 
+}
+
+form.register {
+    height: auto;
 }
 
 button {
@@ -68,7 +73,7 @@ button.up {
     line-height: 2.5em;
 }
 
-input {
+input, textarea{
 
     background-color: transparent;
     border: none;
@@ -79,10 +84,10 @@ input {
 
 }
 
-@media only screen and (max-device-width: 420px) {
+@media only screen and (max-device-width: 400px) {
 
     .container {
-        
+        background: transparent linear-gradient(180deg, #f3c23d 0%, #ecb92d 100%) 0% 0% no-repeat padding-box;
         flex-direction: column;
 
     }
@@ -92,8 +97,11 @@ input {
         font-size: 36px;
 
     }
+    .logo {
+        width: 100%;
+    }
 
-    .login-container, .logo {
+    .login-container {
 
         width: 100%;
 
@@ -205,11 +213,11 @@ li:last-child {
     width: 1em;
 }
 
-.search_bar {
+.search-bar {
     width: 25%;
 }
 
-.search_bar>form>input {
+.search-bar>input {
     background: transparent linear-gradient(180deg, #e9d5a0 0%, #f3d685 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border: 1px solid #707070;
@@ -219,4 +227,53 @@ li:last-child {
     color :gray;
     margin: 0;
     box-sizing: border-box;
+}
+
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2em;
+    padding: 2em;
+    overflow: auto;
+    border-radius: 1em 1em 1em 1em;
+}
+
+.projects>div>img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1em 1em 0 0;
+}
+
+
+.projects>div>div {
+    height: 50%;
+    margin: 1em;
+    color: #707070;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.projects>div {
+    border: 1px solid gray;
+    border-radius: 1em 1em 0 0;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav > form {
+    width: 100%;
+}
+
+.logout > button {
+    width: 100%;
 }

@@ -1,0 +1,89 @@
+main {
+    display: flex;
+    background: transparent linear-gradient(180deg, #f3c23d 0%, #ecb92d 100%) 0% 0% no-repeat padding-box;
+}
+
+settings {
+    overflow: auto;
+}
+
+.settings {
+    display: table-row;
+    margin: 10%;
+    height: 80%;
+    width: 80%;
+    background: #FFFFFFE0 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 1em 1em 1em 1em;
+}
+
+.settings>h {
+    margin-top: 6px;
+    margin-left: 1em;
+    width: 80%;
+    height: 10%;
+    color:#707070;
+    border-bottom: 1px solid #707070;
+}
+
+.option {
+    display: flex;
+    position: center;
+}
+
+.option>button {
+    margin: 2em;
+    width: 50%;
+    height: 20vh;
+
+}
+
+.option>p {
+    margin: 3em;
+    width: 50%;
+    height: 10%;
+    color: #707070;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+}
+  
+.switch {
+    margin: auto;
+    position: center;
+    display: inline-block;
+    font-size: 20px; /* 1 */
+    height: 1em;
+    width: 3em;
+    background: #ecb92d;
+    border-radius: 1em;
+}
+  
+.switch div {
+    height: 1em;
+    width: 1em;
+    border-radius: 1em;
+    background: #707070;
+    box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.3);
+    -webkit-transition: all 300ms;
+       -moz-transition: all 300ms;
+            transition: all 300ms;
+}
+  
+.switch input:checked + div {
+      background: white;
+    -webkit-transform: translate3d(100%, 0, 0);
+       -moz-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+}
+  
+
+@media only screen and (max-device-width: 420px) {
+   
+    /* .body {
+        height: max-content;
+    } */
+
+}

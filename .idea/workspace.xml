@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3cd3382b-41a7-4c7f-82a4-1c0e2086d350" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/views/admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Const.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/recipes.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/recipes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/listener.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/popup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/add-project.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/add-project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/AppController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/ProjectsRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/ProjectsRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/repository/UserRepository.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Registration_validation,_display_projects" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/takikuba/WDPAI" />
+      </set>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php" />
+  <component name="ProjectId" id="1liUnLcb5QRIU3bK1loKz5wNyPj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm" value="Docker Compose" />
+    <property name="credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm" value="Docker Compose" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/upload" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kuba\Desktop\SemestrV\WDPAI\WDPAI\public\upload" />
+      <recent name="C:\Users\Kuba\Desktop\SemestrV\WDPAI\WDPAI\src\controllers" />
+      <recent name="C:\Users\Kuba\Desktop\SemestrV\WDPAI\WDPAI\public\views" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Docker.php/Dockerfile (1)">
+    <configuration name="nginx/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/nginx/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="php/Dockerfile (1)" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/php/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="php/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="" />
+          <option name="buildCliOptions" value="" />
+          <option name="command" value="" />
+          <option name="containerName" value="" />
+          <option name="entrypoint" value="" />
+          <option name="commandLineOptions" value="" />
+          <option name="sourceFilePath" value="docker/php/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.php/Dockerfile (1)" />
+        <item itemvalue="Docker.nginx/Dockerfile" />
+        <item itemvalue="Docker.php/Dockerfile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3cd3382b-41a7-4c7f-82a4-1c0e2086d350" name="Default Changelist" comment="" />
+      <created>1608079571153</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608079571153</updated>
+      <workItem from="1608079573363" duration="1453000" />
+      <workItem from="1608204423503" duration="4471000" />
+      <workItem from="1608478673504" duration="5717000" />
+      <workItem from="1610485414438" duration="6320000" />
+      <workItem from="1610573825946" duration="2679000" />
+      <workItem from="1610625261211" duration="3250000" />
+      <workItem from="1610665347510" duration="2851000" />
+      <workItem from="1611048753234" duration="7508000" />
+      <workItem from="1611440676582" duration="6314000" />
+      <workItem from="1611555822645" duration="13988000" />
+      <workItem from="1611602241172" duration="29409000" />
+      <workItem from="1611643259615" duration="7482000" />
+    </task>
+    <task id="LOCAL-00001" summary="Upload recipe cover and create project object">
+      <created>1610492761129</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610492761129</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Connect to database">
+      <created>1610577052422</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610577052422</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Connect do DB">
+      <created>1610667694457</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610667694457</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Connect do DB">
+      <created>1610668018653</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610668018653</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Validation">
+      <created>1611068920851</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611068920851</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add profile">
+      <created>1611576109187</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611576109187</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Upload recipe cover and create project object" />
+    <MESSAGE value="Connect to database" />
+    <MESSAGE value="Connect do DB" />
+    <MESSAGE value="Validation" />
+    <MESSAGE value="Add profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add profile" />
+  </component>
+</project>
