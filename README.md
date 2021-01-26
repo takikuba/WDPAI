@@ -15,3 +15,9 @@ Aplikacja ma pozwolić stworzyć każdemu amatorowi kuchni pyszny posiłek, uwzg
 
 * Widoki
 https://xd.adobe.com/view/730c5119-5686-45cc-80f8-f81cf9cb1b06-265f/grid
+
+
+<div>
+    <p> Diagram ERD bazy. </p>
+    <img text-align="center" src="https://github.com/takikuba/WDPAI/blob/main/md/erd.png?raw=true">
+</div>
