@@ -59,7 +59,7 @@
                                         <i class="fas fa-heart"><?= $project->getLike(); ?></i>
                                         <i class="fas fa-minus-square"><?= $project->getDislike(); ?></i>
                                     </div>
-                                    <?php $project->getLink(); ?>
+                                    <?= $project->getLink(); ?>
                                 </div>
                             </div>
                         </div>

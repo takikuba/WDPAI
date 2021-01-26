@@ -17,7 +17,24 @@
 
 <div class="base-container">
 
-    <?php include('nav.php') ?>
+
+    <nav>
+        <img src="public/img/logo.svg">
+        <ul>
+
+            <li>
+                <i class="fas fa-cog"></i>
+                <a href="admin" class="button">Seeting</a>
+            </li>
+
+            <li>
+                <form class="logout" action="logout" method="post">
+                    <button>Log out</button>
+                </form>
+            </li>
+
+        </ul>
+    </nav>
 
     <main>
 

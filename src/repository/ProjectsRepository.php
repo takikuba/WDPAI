@@ -70,7 +70,7 @@ class ProjectsRepository extends Repository
                 $project['image'],
                 $project['kcal'],
                 $project['time'],
-                $projects['link'],
+                $project['link'],
                 $project['like'],
                 $project['dislike']
             );
