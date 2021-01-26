@@ -16,6 +16,7 @@ class SecurityController extends AppController {
 
     public function login()
     {
+        $this->requireLogin(false);
 
         if (!$this->isPost()) {
             return $this->render('login');
@@ -40,13 +41,22 @@ class SecurityController extends AppController {
         if ($user->getPassword() !== $password) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
+        $_SESSION[SESSION_KEY_USER_LOGGED] = true;
+        $_SESSION[SESSION_KEY_USER_EMAIL] = $user->getEmail();
+        $_SESSION[SESSION_KEY_USER_ID] = $user->getId();
 
         $url = "http://$_SERVER[HTTP_HOST]";
+
+        if($user->getId() == 0 ){
+            $this->admin();
+        }
+
         header("Location: {$url}/projects");
     }
 
     public function register()
     {
+        $this->requireLogin(false);
         if (!$this->isPost()) {
             return $this->render('register');
         }
@@ -56,16 +66,49 @@ class SecurityController extends AppController {
         $confirmedPassword = $_POST['confirmedPassword'];
         $name = $_POST['name'];
         $surname = $_POST['surname'];
+        $description = "Hello";
+        $id = $this->userRepository->getId($email);
 
         if ($password !== $confirmedPassword) {
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        $user = new User($email, hash('sha512', $password), $name, $surname);
+        $user = new User($email, hash('sha512', $password), $name, $surname, $description, $id);
 
         $this->userRepository->addUser($user);
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
+
+
+    public function logout() {
+        $this->requireLogin();
+        if (!$this->isPost()) {
+            return $this->render('profile');
+        }
+
+        $_SESSION[SESSION_KEY_USER_LOGGED] = false;
+        session_unset();
+        session_destroy();
+
+        return $this->render('login', ['messages' => ['You\'ve succesfully logged out!']]);
+    }
+
+    public function admin(){
+        $this->requireLogin();
+
+        $users = $this->userRepository->getUsers();
+
+        $user = $this->userRepository->getUser('admin@admin.admin');
+
+        return $this->render('admin', ['users'=> $users]);
+
+    }
+
+    public function removeUser(){
+        $this->userRepository->rmUser($_POST['rm']);
+        $this->admin();
+    }
+
 
 }

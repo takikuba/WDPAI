@@ -2,6 +2,7 @@
 
 require_once 'Repository.php';
 require_once __DIR__ . '/../models/Project.php';
+require_once __DIR__ . '/../Const.php';
 
 
 class ProjectsRepository extends Repository
@@ -26,31 +27,34 @@ class ProjectsRepository extends Repository
             $project['description'],
             $project['image'],
             $project['kcal'],
-            $project['time']
+            $project['time'],
+            $project['link']
         );
 
     }
 
-    public function addProject(Project $project): void {
+    public function addProject(Project $project, User $user): void {
+
         $date = new DateTime();
         $stat = $this->database->connect()->prepare('
-            insert into projects (title, description, created_at, id_assigned_by, image, kcal, time)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            insert into projects (title, description, created_at, image, kcal, time, link, id_assigned_by)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ');
 
-        $assignedById = 1;
         $stat->execute([
             $project->getTitle(),
             $project->getDescription(),
             $date->format('Y-m-d'),
-            $assignedById,
             $project->getImage(),
             $project->getKcal(),
-            $project->getTime()
+            $project->getTime(),
+            $project->getLink(),
+            $user->getId()
         ]);
+
     }
 
-    public function getProjects() :array {
+    public function getProjects() : array {
         $result = [];
 
         $stmt = $this->database->connect()->prepare('
@@ -65,12 +69,45 @@ class ProjectsRepository extends Repository
                 $project['description'],
                 $project['image'],
                 $project['kcal'],
-                $project['time']
+                $project['time'],
+                $projects['link'],
+                $project['like'],
+                $project['dislike']
             );
         }
 
         return $result;
 
+    }
+
+    public function getTopProjects() : array{
+        $result = $this->getProjects();
+
+        usort($result, function($a, $b){
+            return $b->getLike() - $a->getLike();
+        });
+
+        return $result;
+    }
+
+    public function getKcalProjects() : array{
+        $result = $this->getProjects();
+
+        usort($result, function($a, $b){
+            return $b->getKcal() - $a->getKcal();
+        });
+
+        return $result;
+    }
+
+    public function getTimeProjects() : array{
+        $result = $this->getProjects();
+
+        usort($result, function($a, $b){
+            return $b->getTime() - $a->getTime();
+        });
+
+        return $result;
     }
 
     public function getProjectByTitle(string $searchString): array
@@ -84,20 +121,43 @@ class ProjectsRepository extends Repository
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
     }
 
-    public function getProjectByUser(int $id): array
-    {
+    public function getProjectByUser(User $user): array {
+        $result = [];
+        $id = $user->getId();
 
         $stmt = $this->database->connect()->prepare('
-            SELECT * FROM projects WHERE id_assigned_by = :id
+            Select * from projects WHERE id_assigned_by = :id;
         ');
         $stmt->bindParam(':id', $id, PDO::PARAM_STR);
         $stmt->execute();
+        $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($projects as $project){
+            $result[] = new Project(
+                $project['title'],
+                $project['description'],
+                $project['image'],
+                $project['kcal'],
+                $project['time'],
+                $project['like'],
+                $project['dislike']
+            );
+        }
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
+    public function rmProject($title){
+
+        $stmt = $this->database->connect()->prepare('
+            DELETE FROM projects WHERE "title" = :title;
+        ');
+        $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+        $stmt->execute();
+
     }
 
     public function like(int $id) {

@@ -19,10 +19,10 @@
                 </li> 
 
                 <li>
-                    <i class="fas fa-sign-out-alt"></i>
-                    <a href="login" class="button">Log Out</a>
-                    <!-- <input type="button" onclick=<?php session_destroy(); ?>>foouts</input> -->
+                    <form class="logout" action="logout" method="post">
+                        <button>Log out</button>
+                    </form>
                 </li>
 
             </ul>
-        </nav>
+</nav>

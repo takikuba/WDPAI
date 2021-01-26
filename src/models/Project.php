@@ -10,17 +10,34 @@ class Project
     private $id;
     private $kcal;
     private $time;
+    private $id_assigned_by;
+    private $link;
 
-    public function __construct($title, $description, $image, $kcal, $time, $like = 0, $dislike = 0, $id = null)
+    public function __construct($title, $description, $image, $kcal, $time, $link, $like = 0, $dislike = 0, $id = null, $id_assigned_by=null)
     {
         $this->title = $title;
         $this->description = $description;
         $this->image = $image;
+        $this->link = $link;
         $this->like = $like;
         $this->dislike = $dislike;
         $this->id = $id;
         $this->kcal = $kcal;
         $this->time = $time;
+        $this->id_assigned_by = $id_assigned_by;
+
+    }
+
+    public function getLink(){
+        return $this->link;
+    }
+
+    public function getIdAssigned(){
+        return $this->id_assigned_by;
+    }
+
+    public function setIdAssigned($id_ass){
+        $this->id_assigned_by = $id_ass;
     }
 
     public function getTitle()

@@ -26,8 +26,21 @@ class UserRepository extends Repository
             $user['email'],
             $user['password'],
             $user['name'],
-            $user['surname']
+            $user['surname'],
+            $user['description'],
+            $user['id']
         );
+    }
+
+    public function getId(string $email){
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM users WHERE email = :email; 
+        ');
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $data['id'];
     }
 
     public function addUser(User $user)
@@ -66,4 +79,40 @@ class UserRepository extends Repository
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         return $data['id'];
     }
+
+    public function getUsers() :array{
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM users u LEFT JOIN users_details ud 
+            ON u.id_users_details = ud.id
+        ');
+        $stmt->execute();
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($users as $user){
+            $result[] = new User(
+                $user['email'],
+                $user['password'],
+                $user['name'],
+                $user['surname'],
+                $user['description'],
+                $user['id']
+            );
+        }
+
+        return $result;
+
+    }
+
+    public function rmUser($email){
+
+        $stmt = $this->database->connect()->prepare('
+            DELETE FROM users WHERE "email" = :email;
+        ');
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->execute();
+
+    }
+
 }

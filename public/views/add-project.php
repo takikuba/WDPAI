@@ -33,6 +33,7 @@
                     <textarea name="description" rows="5" placeholder="Description"></textarea>
                     <input name="kcal" type="text" placeholder="kcal">
                     <input name="time" type="text" placeholder="time">
+                    <input name="link" type="text" placeholder="link">
 
                     <input type="file" name="file">
                     <button type="submit">Send</button>

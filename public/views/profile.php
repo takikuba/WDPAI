@@ -28,7 +28,9 @@
                         <img src="public/img/upload/profile-image.jpg">
                 </div>
                 <div class="profile-info">
-                    <p>Jestem studentem PK itd itp</p>
+                    <p><?= $user->getName(); ?></p>
+                    <p><?= $user->getSurname(); ?></p>
+                    <p><?= $user->getDescription(); ?></p>
                 </div>
                 <button>EDIT</button>
             </header>
@@ -37,18 +39,15 @@
                 <?php foreach ($projects as $project): ?>
                     <div id="<?= $project->getId(); ?>">
                         <img src="public/upload/<?= $project->getImage(); ?>">
-                        <div>
+                        <form method="post" action="removeProject">
                             <h2><?= $project->getTitle(); ?></h2>
-                            <p><?= $project->getDescription(); ?></p>
-                            <div class="info-section">
-                                <i class="fas fa-fire"><?= $project->getKcal(); ?></i>
-                                <i class="fas fa-stopwatch"><?= $project->getTime(); ?></i>
-                            </div>
                             <div class="social-section">
                                 <i class="fas fa-heart"><?= $project->getLike(); ?></i>
                                 <i class="fas fa-minus-square"><?= $project->getDislike(); ?></i>
                             </div>
-                        </div>
+                            <input name="rm" type="hidden" value="<?= $project->getTitle(); ?>">
+                            <button>RM</button>
+                        </form>
                     </div>
                 <?php endforeach; ?>
             </section>

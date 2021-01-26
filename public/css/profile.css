@@ -25,9 +25,8 @@
 @media only screen and (max-device-width: 400px) {
 
     .profile > div > img {
-        height: fit-content;
-    
+        height: 80%;
+        width: 80%;
     }
-
 
 }

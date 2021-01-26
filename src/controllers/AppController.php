@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/../Const.php";
+
 class AppController {
     private $request;
 
@@ -32,4 +34,21 @@ class AppController {
         }
         print $output;
     }
+
+    protected function requireLogin($mustBeLogged = true) {
+        if($mustBeLogged) {
+            if (!$_SESSION[SESSION_KEY_USER_LOGGED]) {
+                $url = "http://$_SERVER[HTTP_HOST]";
+                header("Location: {$url}");
+                die();
+            }
+        }
+        else if ($_SESSION[SESSION_KEY_USER_LOGGED]) {
+            $url = "http://$_SERVER[HTTP_HOST]";
+            header("Location: {$url}/profile");
+            die();
+        }
+    }
+
+
 }
